@@ -1249,12 +1249,13 @@ Tsum.prototype.clearAllBubbles = function(startDelay, endDelay, fromY) {
   for (var bx = Button.gameBubblesFrom.x; bx <= Button.gameBubblesTo.x; bx += 140) {
     for (var by = fy; by <= Button.gameBubblesTo.y; by += 140) {
       this.tap({x: bx, y: by}, 10);
+      this.sleep(100);
     }
   }
 
   if (endDelay !== undefined) {
     this.sleep(endDelay);
-  }
+  }	
 }
 
 Tsum.prototype.useCinderellaSkill = function(board) {
